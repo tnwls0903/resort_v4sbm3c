@@ -15,16 +15,12 @@
             다시 시도해주세요.
           </div>
           <div th:case="check_upload_file_fail">
-            <span class="span_fail">등록할 수 없는 파일 형식입니다.</span><br>
+            <span class="span_fail">등록 할 수 없는 파일 형식입니다.</span><br>
             다시 시도해주세요.
           </div>
           <div th:case="passwd_fail">
-            <span class="span_fail">패스워드가 일치하지 않습니다</span><br>
+            <span class="span_fail">패스워드가 일치하지 않습니다.</span><br>
             다시 시도해주세요.
-          </div>
-          <div th:case="update_fail">
-            <span class="span_fail">카테고리 수정에 실패했습니다.</span><br>
-            수정 실패된 카테고리: <span th:text="${name}"></span> <span th:text="${namesub}"></span>
           </div>
           <div th:case="delete_success">
             <span class="span_success">카테고리 삭제에 성공했습니다.</span><br>

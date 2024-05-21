@@ -412,6 +412,10 @@ public class Tool {
   public static synchronized String youtubeResize(String url, int resizeWidth) {
     String[] tokens = url.split(" "); // 공백으로 문자열 분리
     
+    for (String item : tokens) {
+      System.out.println(item);
+    }
+    
     // 정수 추출
     int width = Integer.parseInt(tokens[1].replaceAll("[^0-9]", ""));
     int height = Integer.parseInt(tokens[2].replaceAll("[^0-9]", ""));
@@ -427,9 +431,9 @@ public class Tool {
     
     // 문자열 결합
     StringBuffer sb = new StringBuffer();
-    sb.append(tokens[0]); // 첫 번째 토큰은 공백 없어야 함.
+    sb.append(tokens[0]); // 첫번째 토큰은 공백이 없어야함.
     
-    for (int i=1; i<tokens.length; i++) { // 두 번째 토큰부터 공백 허용
+    for (int i=1; i < tokens.length; i++) {
       sb.append(" " + tokens[i]);
     }
     

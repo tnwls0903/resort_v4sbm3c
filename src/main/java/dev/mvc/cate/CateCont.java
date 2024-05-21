@@ -105,6 +105,8 @@ public class CateCont {
 //      model.addAttribute("code", "create_success");
 //      model.addAttribute("name", cateVO.getName());
 //      model.addAttribute("namesub", cateVO.getNamesub());
+      // 카테고리에 해당하는 폴더 생성
+      // upDir = upDir + "/" + 한글을 제외한 카테고리 이름
       
       return "redirect:/cate/list_search"; // /cate/list_search.html
       
@@ -471,6 +473,7 @@ public class CateCont {
       
       // 페이징 버튼 목록
       int search_count = this.cateProc.list_search_count(word);
+      
       String paging = this.cateProc.pagingBox(now_page, 
           word, "/cate/list_search", search_count, this.record_per_page, this.page_per_block);
       model.addAttribute("paging", paging);

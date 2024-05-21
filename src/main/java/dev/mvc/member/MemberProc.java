@@ -109,11 +109,6 @@ public class MemberProc implements MemberProcInter {
   
   @Override
   public int passwd_check(HashMap<String, Object> map) {
-    // 패스워드 암호화
-    String passwd = (String)map.get("passwd");
-    passwd = this.security.aesEncode(passwd);
-    map.put("passwd", passwd);
-    
     int cnt = this.memberDAO.passwd_check(map);
     return cnt;
   }

@@ -53,12 +53,12 @@ public class Download extends jakarta.servlet.http.HttpServlet {
 
 
   protected void doProcess(HttpServletRequest request,
-                                    HttpServletResponse response) throws ServletException, IOException {
+      HttpServletResponse response) throws ServletException, IOException {
     ServletContext ctx = config.getServletContext();
 
     // 저장 폴더를 절대 경로로 변환, /contents/storage, /notice/storage, /member/storage...
     String dir =  Tool.getOSPath() + request.getParameter("dir");
-    // 완성된 경로 dir: C:/kd/deploy/resort_v4sbm3c/contents/storage/
+    // 완성된 경로 dir: C:/kd/deploy/resort_v2sbm3c/contents/storage/
     System.out.println("-> 완성된 경로 dir: " + dir);
 
     // 실제 웹사이트 서버에 저장된 파일명: file1saved

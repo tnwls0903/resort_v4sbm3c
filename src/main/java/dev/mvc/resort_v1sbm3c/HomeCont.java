@@ -33,6 +33,8 @@ public class HomeCont {
 //      System.out.println(security.aesEncode("1234"));
 //    }
     
+    System.out.println("-> http://localhost:9091");
+    
     ArrayList<CateVOMenu> menu = this.cateProc.menu();
     model.addAttribute("menu", menu);
     

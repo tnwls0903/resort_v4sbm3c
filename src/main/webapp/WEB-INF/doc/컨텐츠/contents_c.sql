@@ -11,8 +11,8 @@ CREATE TABLE contents(
         recom                                 NUMBER(7)         DEFAULT 0         NOT NULL,
         cnt                                   NUMBER(7)         DEFAULT 0         NOT NULL,
         replycnt                              NUMBER(7)         DEFAULT 0         NOT NULL,
-        passwd                                VARCHAR2(15)         NOT NULL,
-        word                                  VARCHAR2(100)         NULL ,
+        passwd                                VARCHAR2(100)         NOT NULL,
+        word                                  VARCHAR2(200)         NULL ,
         rdate                                 DATE               NOT NULL,
         file1                                   VARCHAR(100)          NULL,  -- 원본 파일명 image
         file1saved                            VARCHAR(100)          NULL,  -- 저장된 파일명, image
@@ -26,6 +26,7 @@ CREATE TABLE contents(
         map                                   VARCHAR2(1000)            NULL,
         youtube                               VARCHAR2(1000)            NULL,
         mp4                                  VARCHAR2(100)            NULL,
+		visible                        		CHAR(1)		 DEFAULT 'Y' NOT NULL,
         FOREIGN KEY (memberno) REFERENCES member (memberno),
         FOREIGN KEY (cateno) REFERENCES cate (cateno)
 );
@@ -54,6 +55,7 @@ COMMENT ON COLUMN contents.salecnt is '재고 수량';
 COMMENT ON COLUMN contents.map is '지도';
 COMMENT ON COLUMN contents.youtube is 'Youtube 영상';
 COMMENT ON COLUMN contents.mp4 is '영상';
+COMMENT ON COLUMN contents.visible is '출력 모드';
 
 DROP SEQUENCE contents_seq;
 

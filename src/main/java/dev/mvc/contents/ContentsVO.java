@@ -95,6 +95,7 @@ public class ContentsVO {
     private int point = 0;
     /** 재고 수량 */
     private int salecnt = 0;
-
+    
+       
 }
 
